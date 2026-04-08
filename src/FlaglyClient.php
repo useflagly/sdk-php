@@ -12,7 +12,9 @@ class FlaglyClient
     private ?string $token;
     private int $timeoutSeconds;
 
-    public function __construct(string $baseUrl, ?string $token = null, int $timeoutSeconds = 10)
+    public const DEFAULT_BASE_URL = 'https://api.useflagly.com.br';
+
+    public function __construct(string $baseUrl = self::DEFAULT_BASE_URL, ?string $token = null, int $timeoutSeconds = 10)
     {
         $this->baseUrl = rtrim($baseUrl, '/');
         $this->token = $token;
