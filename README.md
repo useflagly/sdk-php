@@ -11,10 +11,10 @@ composer require useflagly/sdk-php
 ## Uso
 
 ```php
-use Flagly\FlaglyClient;
-use Flagly\Models;
+use UseFlagly\UseFlaglyClient;
+use UseFlagly\Models;
 
-$client = new FlaglyClient(token: 'seu-api-token');
+$client = new UseFlaglyClient(token: 'seu-api-token');
 // A URL padrão é https://api.useflagly.com.br — pode ser sobrescrita no primeiro parâmetro
 
 // Validar flag

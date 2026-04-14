@@ -1,6 +1,6 @@
 {
   "name": "useflagly/sdk-php",
-  "description": "PHP SDK for the Flagly feature-flag API",
+  "description": "PHP SDK for the UseFlagly feature-flag API",
   "type": "library",
   "license": "MIT",
   "require": {
@@ -8,7 +8,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Flagly\\": "src/"
+      "UseFlagly\\": "src/"
     }
   },
   "repositories": [],
