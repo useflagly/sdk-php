@@ -56,7 +56,7 @@ class UseFlaglyClient
             throw new RuntimeException('Flagly HTTP error: ' . $error);
         }
         if ($httpCode >= 400) {
-            throw new RuntimeException('Flagly server error ' . $httpCode . ': ' . $response);
+            throw new FlaglyException($httpCode, $response ?: '');
         }
         if ($httpCode === 204 || $response === '') {
             return null;
