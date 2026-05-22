@@ -53,7 +53,7 @@ class UseFlaglyClient
         curl_close($ch);
 
         if ($error !== '') {
-            throw new RuntimeException('Flagly HTTP error: ' . $error);
+            throw new FlaglyException(0, $error);
         }
         if ($httpCode >= 400) {
             throw new FlaglyException($httpCode, $response ?: '');

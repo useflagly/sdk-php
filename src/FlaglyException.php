@@ -39,4 +39,10 @@ class FlaglyException extends RuntimeException
     {
         return $this->statusCode === 401;
     }
+
+    /** Returns true when the request failed at the network level (no HTTP response). */
+    public function isNetworkError(): bool
+    {
+        return $this->statusCode === 0;
+    }
 }
